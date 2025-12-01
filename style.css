@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Indie Flower', cursive;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    padding: 20px 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #7a6f47;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 30px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ec4899;
+}
+
+/* Page sections with background images */
+.page-section {
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* My Work page - clickable text labels */
+.work-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-labels {
+    display: flex;
+    gap: 230px;
+    margin-top: 100px;
+}
+
+.work-label {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 28px;
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.2;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.work-label:hover {
+    transform: scale(1.1);
+    color: #ec4899;
+}
+
+/* About page text */
+.about-text-content {
+    position: absolute;
+    right: 5px;
+    top: 80%;
+    transform: translateY(-50%);
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.about-text-content p {
+    margin-bottom: 30px;
+}
+
+/* Contact page */
+.contact-info {
+    text-align: center;
+    padding-top: 450px;
+    font-size: 28px;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* Gallery layout */
+.gallery-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 100px 50px;
+    gap: 40px;
+}
+
+.arrow-btn {
+    flex-shrink: 0;
+    transition: transform 0.3s;
+}
+
+.arrow-btn:hover {
+    transform: scale(1.1);
+}
+
+.arrow-btn img {
+    width: 80px;
+    height: 80px;
+}
+
+/* Artwork display */
+.artwork-content {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.artwork-image {
+    flex-shrink: 0;
+}
+
+.artwork-image img {
+    max-width: 450px;
+    max-height: 600px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.artwork-info {
+    color: #333;
+}
+
+.artwork-info h2 {
+    font-size: 42px;
+    color: #7a6f47;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.artwork-info .details {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.artwork-info .description {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .artwork-content {
+        flex-direction: column;
+    }
+    
+    .work-labels {
+        gap: 100px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav a {
+        margin: 0 15px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .artwork-image img {
+        max-width: 300px;
+    }
+    
+    .artwork-info h2 {
+        font-size: 32px;
+    }
+    
+    nav a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+    
+    .contact-info {
+        font-size: 20px;
+    }
+    
+    .work-label {
+        font-size: 24px;
+    }
+}
