@@ -33,7 +33,7 @@ nav a:hover {
     color: #ec4899;
 }
 
-/* Page sections with background images */
+/* Page with empty background */
 .page-section {
     min-height: 100vh;
     width: 100%;
@@ -43,7 +43,7 @@ nav a:hover {
     position: relative;
 }
 
-/* My Work page - clickable text labels */
+/* My Work page */
 .work-page {
     display: flex;
     align-items: center;
@@ -89,7 +89,8 @@ nav a:hover {
 
 /* Contact page */
 .contact-info {
-    text-align: center;
+    position:absolute;
+    right: 120px;
     padding-top: 450px;
     font-size: 28px;
     color: #333;
@@ -201,3 +202,4 @@ nav a:hover {
         font-size: 24px;
     }
 }
+
